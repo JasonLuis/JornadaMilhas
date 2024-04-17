@@ -1,0 +1,11 @@
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\bin\Debug\net8.0\JornadaMilhas.Shared.Models.deps.json
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\bin\Debug\net8.0\JornadaMilhas.Shared.Models.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\bin\Debug\net8.0\JornadaMilhas.Shared.Models.pdb
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.AssemblyInfoInputs.cache
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.AssemblyInfo.cs
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\refint\JornadaMilhas.Shared.Models.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.pdb
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\ref\JornadaMilhas.Shared.Models.dll

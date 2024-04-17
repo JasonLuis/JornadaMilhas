@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "zXeMh3kP7Gfz5/ceHxGihHlPEfZM64xI4TIG2iCgj40=",
+  "Source": "JornadaMilhas.API",
+  "BasePath": "_content/JornadaMilhas.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "JornadaMilhas.API\\wwwroot",
+      "Source": "JornadaMilhas.API",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\JornadaMilhas\\JornadaMilhas\\wwwroot\\",
+      "BasePath": "_content/JornadaMilhas.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

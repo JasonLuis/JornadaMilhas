@@ -1,0 +1,17 @@
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\bin\Debug\net8.0\JornadaMilhas.Shared.Dados.deps.json
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\bin\Debug\net8.0\JornadaMilhas.Shared.Dados.runtimeconfig.json
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\bin\Debug\net8.0\JornadaMilhas.Shared.Dados.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\bin\Debug\net8.0\JornadaMilhas.Shared.Dados.pdb
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\bin\Debug\net8.0\JornadaMilhas.Shared.Models.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\bin\Debug\net8.0\JornadaMilhas.Shared.Models.pdb
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.csproj.AssemblyReference.cache
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.AssemblyInfoInputs.cache
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.AssemblyInfo.cs
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaM.6A30147F.Up2Date
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\refint\JornadaMilhas.Shared.Dados.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.pdb
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.genruntimeconfig.cache
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\ref\JornadaMilhas.Shared.Dados.dll

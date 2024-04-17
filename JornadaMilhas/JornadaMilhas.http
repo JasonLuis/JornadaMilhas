@@ -1,0 +1,6 @@
+@JornadaMilhas_HostAddress = http://localhost:5035
+
+GET {{JornadaMilhas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
