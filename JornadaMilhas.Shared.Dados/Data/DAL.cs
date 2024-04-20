@@ -22,6 +22,7 @@ public class DAL<T> where T : class
     public T Adicionar(T objeto)
     {
         context.Set<T>().Add(objeto);
+        context.SaveChanges();
         return objeto;
     }
     public void Atualizar(T objeto)

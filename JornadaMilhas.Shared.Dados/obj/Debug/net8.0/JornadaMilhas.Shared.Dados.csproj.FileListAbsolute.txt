@@ -15,3 +15,4 @@ C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\n
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.pdb
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.genruntimeconfig.cache
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\ref\JornadaMilhas.Shared.Dados.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Dados\obj\Debug\net8.0\JornadaMilhas.Shared.Dados.sourcelink.json

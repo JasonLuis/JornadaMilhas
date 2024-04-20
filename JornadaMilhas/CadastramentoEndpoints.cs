@@ -11,9 +11,9 @@ public static class CadastramentoEndpoints
         endpoints
             .MapJornadaMilhasEndpoint(
                 new ListarDepoimentoEndpoint(),
-                ListarDepoimentoEndpoint.Execute)
-            .MapJornadaMilhasEndpoint(
-                new CriarDepoimentoEndpoint(),
-                CriarDepoimentoEndpoint.ExecuteAsync);
+                ListarDepoimentoEndpoint.Execute);
+            //.MapJornadaMilhasEndpoint(
+            //    new CriarDepoimentoEndpoint(),
+            //    CriarDepoimentoEndpoint.ExecuteAsync);
     }
 }

@@ -1,12 +1,13 @@
 ﻿using Azure.Core;
 using Detran.Common.Core;
 using JornadaMilhas.API.Common;
+using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 
 namespace JornadaMilhas.API.Depoimentos.CriarDepoimento;
 
-public class CriarDepoimentoEndpoint() : EndpointBase(HttpMethod.Post)
+public class CriarDepoimentoEndpoint() : CommandEndpoint<CriarDepoimentoRequest>(default!)
 {
     internal static async Task<CriarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, CriarDepoimentoRequest request, DAL<Depoimento> dal)
     {
@@ -28,17 +29,8 @@ public class CriarDepoimentoEndpoint() : EndpointBase(HttpMethod.Post)
         {
             Foto = foto,
         };
-        var res = dal.Adicionar(depoimento);
+        var response = dal.Adicionar(depoimento);
 
-        var depoimentoResponse = new CriarDepoimentoResponse(res.Id, res.Nome, res.Texto);
-        return depoimentoResponse;
-    }
-
-    public static ITaskWrapperType<CriarDepoimentoResponse> RequestAsync(IAppApiService client)
-    {
-        return client.RequestAsync(
-            new CriarDepoimentoEndpoint(),
-            DepoimentosContextSeralization.Default.CriarDepoimentoResponse
-        );
+        return new CriarDepoimentoResponse(response.Id, response.Nome, response.Texto, response.Foto);
     }
 }

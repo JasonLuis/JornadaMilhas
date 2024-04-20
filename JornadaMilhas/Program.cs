@@ -1,4 +1,5 @@
 using JornadaMilhas.API;
+using JornadaMilhas.API.core;
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 
@@ -24,6 +25,11 @@ if (app.Environment.IsDevelopment())
 
 
 app.MapCadastramentoEndpoints();
+
+app.MapJornadaMilhasEndpoints
+(
+    CadastrarEndpoint.Register
+);
 
 app.UseHttpsRedirection();
 
