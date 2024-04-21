@@ -2,7 +2,7 @@
 
 public class ListarDepoimentosResponse
 {
-    public ListarDepoimentosResponse(int id, string? foto, string? texto, string nome)
+    public ListarDepoimentosResponse(Guid id, string? foto, string? texto, string nome)
     {
         Id = id;
         Foto = foto;
@@ -10,7 +10,7 @@ public class ListarDepoimentosResponse
         Nome = nome;
     }
 
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     public string? Foto { get; set; }
     public string? Texto { get; set; }
     public string? Nome { get; set; }

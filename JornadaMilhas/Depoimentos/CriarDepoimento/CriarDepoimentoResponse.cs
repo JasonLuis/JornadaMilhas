@@ -1,3 +1,3 @@
 ﻿namespace JornadaMilhas.API.Depoimentos.CriarDepoimento;
 
-public record CriarDepoimentoResponse(int Id, string Nome, string Texto, string? Foto = "");
+public record CriarDepoimentoResponse(Guid Id, string Nome, string Texto, string? Foto = "");

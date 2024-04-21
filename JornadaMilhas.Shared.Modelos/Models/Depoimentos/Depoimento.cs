@@ -13,7 +13,7 @@ public class Depoimento
         Texto = texto;
     }
 
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     public string Nome { get; set; }
     public string Texto { get; set; }
