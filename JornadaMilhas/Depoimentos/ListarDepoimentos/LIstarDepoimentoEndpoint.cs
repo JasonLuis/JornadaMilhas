@@ -1,27 +1,26 @@
 ﻿using JornadaMilhas.API.Common;
+using JornadaMilhas.API.core.Endpoint;
+using JornadaMilhas.API.core.EndPoint;
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
+using System.Collections.Generic;
 
 namespace JornadaMilhas.API.Depoimentos.ListarDepoimentos;
 
-public class ListarDepoimentoEndpoint() : EndpointBase(HttpMethod.Get)
+public class ListarDepoimentoEndpoint() : QueryEndpoint<ListarDepoimentosResponse[]>(default!)
 {
 
-    internal static ListarDepoimentosResponse[] Execute(DAL<Depoimento> dal)
-    {
-        var listar = dal.Listar();
+    //internal static ListarDepoimentosResponse[] Execute(DAL<Depoimento> dal) => 
+    //{
+    //    var listar = dal.Listar();
 
-        ListarDepoimentosResponse[] depoimentos =
-            listar.Select(x => new ListarDepoimentosResponse(x.Id, x.Foto, x.Texto, x.Nome)).ToArray();
+    //    ListarDepoimentosResponse[] depoimentos =
+    //        listar.Select(x => new ListarDepoimentosResponse(x.Id, x.Foto, x.Texto, x.Nome)).ToArray();
 
-        return depoimentos;
-    }
+    //    return depoimentos;
+    //}
 
-    public static ITaskWrapperType<ListarDepoimentosResponse[]> RequestAsync(IAppApiService client)
-    {
-        return client.RequestAsync(
-            new ListarDepoimentoEndpoint(),
-            DepoimentosContextSeralization.Default.ListarDepoimentosResponseArray
-        )!;
-    }
+    internal static ListarDepoimentosResponse[] Execute(DAL<Depoimento> dal) =>
+        dal.Listar().Select(x => new ListarDepoimentosResponse(x.Id, x.Foto, x.Texto, x.Nome)).ToArray();
+
 }

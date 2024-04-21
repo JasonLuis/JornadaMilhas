@@ -9,3 +9,4 @@ C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\refint\JornadaMilhas.Shared.Models.dll
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.pdb
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\ref\JornadaMilhas.Shared.Models.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas.Shared.Modelos\obj\Debug\net8.0\JornadaMilhas.Shared.Models.sourcelink.json

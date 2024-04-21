@@ -23,9 +23,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-app.MapCadastramentoEndpoints();
-
 app.MapJornadaMilhasEndpoints
 (
     CadastrarEndpoint.Register
