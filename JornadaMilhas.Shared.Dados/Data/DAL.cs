@@ -25,10 +25,11 @@ public class DAL<T> where T : class
         context.SaveChanges();
         return objeto;
     }
-    public void Atualizar(T objeto)
+    public T Atualizar(T objeto)
     {
         context.Set<T>().Update(objeto);
         context.SaveChanges();
+        return objeto;
     }
     public void Remover(T objeto)
     {

@@ -21,6 +21,8 @@ public abstract class EndpointBase(
     {
         EndpointMethod.Get => HttpMethod.Get,
         EndpointMethod.Post => HttpMethod.Post,
+        EndpointMethod.Put => HttpMethod.Put,
+        EndpointMethod.Delete => HttpMethod.Delete,
         _ => throw new NotImplementedException()
     };
 }

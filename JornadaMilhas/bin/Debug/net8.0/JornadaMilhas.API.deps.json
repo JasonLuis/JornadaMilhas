@@ -9,6 +9,7 @@
       "JornadaMilhas.API/1.0.0": {
         "dependencies": {
           "JornadaMilhas.Shared.Dados": "1.0.0",
+          "Menso.Tools.Exceptions": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.3",
           "Microsoft.EntityFrameworkCore.Design": "8.0.4",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -67,6 +68,14 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Menso.Tools.Exceptions/1.0.0": {
+        "runtime": {
+          "lib/net8.0/Menso.Tools.Exceptions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1049,6 +1058,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Menso.Tools.Exceptions/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IVip01EhcIhkBirVIrG4y7zbdfsLccD15gBKsa1EznFb+gFl9XkimAYjo8uH+dsBScasYSbZrEMk3AuDtUaR4g==",
+      "path": "menso.tools.exceptions/1.0.0",
+      "hashPath": "menso.tools.exceptions.1.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.4": {
       "type": "package",

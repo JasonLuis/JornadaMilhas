@@ -95,6 +95,8 @@ public static class MapJornadaMilhasEndpointExtension
         {
             EndpointMethod.Get => endpoints.MapGet(endpoint.Paths, del),
             EndpointMethod.Post => endpoints.MapPost(endpoint.Paths, del),
+            EndpointMethod.Put => endpoints.MapPut(endpoint.Paths, del),
+            EndpointMethod.Delete => endpoints.MapDelete(endpoint.Paths, del),
             _ => throw new NotImplementedException()
         };
 

@@ -4,15 +4,15 @@ namespace JornadaMilhas.API.Depoimentos.EditarDepoimento;
 
 public class EditarDepoimentoRequest
 {
-    public EditarDepoimentoRequest(int id, string nome, string texto, string? foto)
+    public EditarDepoimentoRequest(Guid id, string nome, string texto)
     {
+        Id = id;
         Nome = nome;
         Texto = texto;
-        Foto = foto;
     }
 
     [Required]
-    public string Id { get; set; }
+    public Guid Id { get; set; }
 
     [Required]
     public string Nome { get; set; }
