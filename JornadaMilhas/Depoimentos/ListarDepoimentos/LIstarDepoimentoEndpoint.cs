@@ -9,17 +9,6 @@ namespace JornadaMilhas.API.Depoimentos.ListarDepoimentos;
 
 public class ListarDepoimentoEndpoint() : QueryEndpoint<ListarDepoimentosResponse[]>(default!)
 {
-
-    //internal static ListarDepoimentosResponse[] Execute(DAL<Depoimento> dal) => 
-    //{
-    //    var listar = dal.Listar();
-
-    //    ListarDepoimentosResponse[] depoimentos =
-    //        listar.Select(x => new ListarDepoimentosResponse(x.Id, x.Foto, x.Texto, x.Nome)).ToArray();
-
-    //    return depoimentos;
-    //}
-
     internal static ListarDepoimentosResponse[] Execute(DAL<Depoimento> dal) =>
         dal.Listar().Select(x => new ListarDepoimentosResponse(x.Id, x.Foto, x.Texto, x.Nome)).ToArray();
 

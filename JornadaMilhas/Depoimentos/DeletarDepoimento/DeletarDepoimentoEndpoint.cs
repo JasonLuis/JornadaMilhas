@@ -12,10 +12,7 @@ public class DeletarDepoimentoEndpoint() : DeleteEndpoint<ValueRequest<Guid>>(de
     {
         var depoimento = dal.RecuperarPor(a => a.Id == id.Value);
 
-        if (depoimento is null)
-        {
-            Throw.When.Null(depoimento, "depoimento não encontrado");
-        }
+        Throw.When.Null(depoimento, "depoimento não encontrado");
 
         dal.Remover(depoimento);
     }
