@@ -65,7 +65,6 @@ C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\Jornada
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.AssemblyInfoInputs.cache
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.AssemblyInfo.cs
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.csproj.CoreCompileInputs.cache
-C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\staticwebassets.development.json

@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Destinos\CriarDestinos\" />
     <Folder Include="wwwroot\Fotos\" />
   </ItemGroup>
 

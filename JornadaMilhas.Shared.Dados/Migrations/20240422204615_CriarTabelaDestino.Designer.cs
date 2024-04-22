@@ -4,6 +4,7 @@ using JornadaMilhas.Shared.Dados.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JornadaMilhas.Shared.Dados.Migrations
 {
     [DbContext(typeof(JornadaMilhasContext))]
-    partial class JornadaMilhasContextModelSnapshot : ModelSnapshot
+    [Migration("20240422204615_CriarTabelaDestino")]
+    partial class CriarTabelaDestino
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
