@@ -11,13 +11,8 @@ public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest
     internal static async Task<EditarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, EditarDepoimentoRequest request, DAL<Depoimento> dal, IDepoimentoRepository depoimentoRepository)
     {
 
-
         var depoimento = dal.RecuperarPor(d => d.Id == request.Id);
-
-
         Throw.When.Null(depoimento, "depoimento não encontrado");
-
-
 
         string foto = "";
 
