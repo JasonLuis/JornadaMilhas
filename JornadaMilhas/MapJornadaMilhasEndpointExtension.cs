@@ -38,14 +38,14 @@ public static class MapJornadaMilhasEndpointExtension
 
         routeBuilder.DisableAntiforgery();
 
-        //if (endpoint.AllowAnonymous)
-        //{
-        routeBuilder.AllowAnonymous();
-        //}
-        //else
-        //{
-        //    routeBuilder.RequireAuthorization();
-        //}
+        if (endpoint.AllowAnonymous)
+        {
+            routeBuilder.AllowAnonymous();
+        }
+        else
+        {
+          routeBuilder.RequireAuthorization();
+        }
 
         return endpoints;
     }

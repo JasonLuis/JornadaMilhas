@@ -149,3 +149,4 @@ C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\zh-Hant
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\JornadaMilhas.API.staticwebassets.runtime.json
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.sourcelink.json
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\Menso.Tools.Exceptions.dll
+C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.MvcApplicationPartsAssemblyInfo.cs

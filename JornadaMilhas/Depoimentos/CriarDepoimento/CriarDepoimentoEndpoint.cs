@@ -1,8 +1,4 @@
-﻿using Azure.Core;
-using Detran.Common.Core;
-using JornadaMilhas.API.Common;
-using JornadaMilhas.API.core.Endpoint;
-using JornadaMilhas.Shared.Dados.Data;
+﻿using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 
