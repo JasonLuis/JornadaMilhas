@@ -1,12 +1,17 @@
 using JornadaMilhas.API;
 using JornadaMilhas.API.core;
 using JornadaMilhas.Shared.Dados.Data;
+using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<JornadaMilhasContext>();
 builder.Services.AddTransient<DAL<Depoimento>>();
+
+
+// builder.Services.AddScoped<IDepoimentoRepository, DepoimentoRepository>();
+builder.Services.AddServiceApplicationContext();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

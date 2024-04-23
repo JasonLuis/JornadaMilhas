@@ -1,13 +1,14 @@
 ﻿using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.Shared.Dados.Data;
+using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 using Menso.Tools.Exceptions;
 
 namespace JornadaMilhas.API.Depoimentos.EditarDepoimento;
 
-public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest>(default!)
+public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest>(default!, true)
 {
-    internal static async Task<EditarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, EditarDepoimentoRequest request, DAL<Depoimento> dal)
+    internal static async Task<EditarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, EditarDepoimentoRequest request, DAL<Depoimento> dal, IDepoimentoRepository depoimentoRepository)
     {
 
 
@@ -36,7 +37,7 @@ public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest
         depoimento!.Nome = request.Nome;
         depoimento.Texto = request.Texto;
 
-        var response = dal.Atualizar(depoimento);
+        var response = depoimentoRepository.Atualizar(depoimento);
 
         return new EditarDepoimentoResponse(response.Id, response.Nome, response.Texto, response.Foto);
     }

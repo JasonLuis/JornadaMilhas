@@ -3,13 +3,14 @@ using Detran.Common.Core;
 using JornadaMilhas.API.Common;
 using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.Shared.Dados.Data;
+using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 
 namespace JornadaMilhas.API.Depoimentos.CriarDepoimento;
 
-public class CriarDepoimentoEndpoint() : CommandEndpoint<CriarDepoimentoRequest>(default!)
+public class CriarDepoimentoEndpoint() : CommandEndpoint<CriarDepoimentoRequest>(default!, true)
 {
-    internal static async Task<CriarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, CriarDepoimentoRequest request, DAL<Depoimento> dal)
+    internal static async Task<CriarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, CriarDepoimentoRequest request, IDepoimentoRepository DepoimentoRepository)
     {
         string foto = "";
 
@@ -29,7 +30,7 @@ public class CriarDepoimentoEndpoint() : CommandEndpoint<CriarDepoimentoRequest>
         {
             Foto = foto,
         };
-        var response = dal.Adicionar(depoimento);
+        var response = DepoimentoRepository.Adicionar(depoimento);
 
         return new CriarDepoimentoResponse(response.Id, response.Nome, response.Texto, response.Foto);
     }

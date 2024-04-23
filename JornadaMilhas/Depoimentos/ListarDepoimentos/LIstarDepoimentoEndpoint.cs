@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace JornadaMilhas.API.Depoimentos.ListarDepoimentos;
 
-public class ListarDepoimentoEndpoint() : QueryEndpoint<ListarDepoimentosResponse[]>(default!)
+public class ListarDepoimentoEndpoint() : QueryEndpoint<ListarDepoimentosResponse[]>(default!, true)
 {
     internal static ListarDepoimentosResponse[] Execute(DAL<Depoimento> dal) =>
         dal.Listar().Select(x => new ListarDepoimentosResponse(x.Id, x.Foto, x.Texto, x.Nome)).ToArray();

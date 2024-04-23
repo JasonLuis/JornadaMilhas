@@ -105,14 +105,14 @@ public static class MapJornadaMilhasEndpointExtension
             routeBuilder.CacheOutput(endpoint.CacheOutputPolicy);
         }
 
-        //if (endpoint.AllowAnonymous)
-        //{
-        routeBuilder.AllowAnonymous();
-        //}
-        //else
-        //{
-        //    routeBuilder.RequireAuthorization();
-        //}
+        if (endpoint.AllowAnonymous)
+        {
+            routeBuilder.AllowAnonymous();
+        }
+        else
+        {
+            routeBuilder.RequireAuthorization();
+        }
         return routeBuilder;
     }
 }
