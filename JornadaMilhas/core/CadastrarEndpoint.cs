@@ -5,6 +5,7 @@ using JornadaMilhas.API.Depoimentos.EditarDepoimento;
 using JornadaMilhas.API.Depoimentos.ListarDepoimentos;
 using JornadaMilhas.API.Depoimentos.ListarDepoimentosRandomico;
 using JornadaMilhas.API.Destinos.CriarDestinos;
+using JornadaMilhas.API.Destinos.EdiarDestino;
 
 namespace JornadaMilhas.API.core;
 
@@ -21,5 +22,6 @@ public static class CadastrarEndpoint
 
         //Destinos
         registry.Register(new CriarDestinoEndpoint(), CriarDestinoEndpoint.ExecuteAsync);
+        registry.Register(new EditarDestinoEndpoint(), EditarDestinoEndpoint.ExecuteAsync);
     }
 }
