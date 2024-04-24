@@ -11,7 +11,7 @@ using Menso.Tools.Exceptions;
 
 namespace JornadaMilhas.API.Destinos.EdiarDestino;
 
-public class EditarDestinoEndpoint() : UpdateEndpoint<EditarDestinoRequest>(default!, true)
+public class EditarDestinoEndpoint() : UpdateEndpoint<EditarDestinoRequest>(default!, true, "Destino")
 {
 
     internal static async Task<EditarDestinoResponse> ExecuteAsync(IHostEnvironment env, EditarDestinoRequest request, DAL<Destino> dal, IDestinoRepository repository)

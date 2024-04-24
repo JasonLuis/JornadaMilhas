@@ -4,7 +4,7 @@ using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 
 namespace JornadaMilhas.API.Depoimentos.CriarDepoimento;
 
-public class CriarDepoimentoEndpoint() : CommandEndpoint<CriarDepoimentoRequest>(default!, true)
+public class CriarDepoimentoEndpoint() : CommandEndpoint<CriarDepoimentoRequest>(default!, true, "Depoimentos")
 {
     internal static async Task<CriarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, CriarDepoimentoRequest request, IDepoimentoRepository DepoimentoRepository)
     {

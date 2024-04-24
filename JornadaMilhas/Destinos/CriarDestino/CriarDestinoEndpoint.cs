@@ -8,7 +8,7 @@ using JornadaMilhas.Shared.Models.Models.Destinos;
 
 namespace JornadaMilhas.API.Destinos.CriarDestinos;
 
-public class CriarDestinoEndpoint(): CommandEndpoint<CriarDestinoRequest>(default!, true)
+public class CriarDestinoEndpoint(): CommandEndpoint<CriarDestinoRequest>(default!, true, "Destino")
 {
 
     internal static async Task<CriarDestinoResponse> ExecuteAsync(IHostEnvironment env, CriarDestinoRequest request, IDestinoRepository destinoRepository)

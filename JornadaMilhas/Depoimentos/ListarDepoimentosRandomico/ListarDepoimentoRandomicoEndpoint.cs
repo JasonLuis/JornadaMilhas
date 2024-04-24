@@ -6,7 +6,7 @@ using System;
 
 namespace JornadaMilhas.API.Depoimentos.ListarDepoimentosRandomico;
 
-public class ListarDepoimentoRandomicoEndpoint() : QueryEndpoint<ListarDepoimentoRandomicoResponse[]>(default!, true)
+public class ListarDepoimentoRandomicoEndpoint() : QueryEndpoint<ListarDepoimentoRandomicoResponse[]>(default!, true, "Depoimentos")
 {
     internal static ListarDepoimentoRandomicoResponse[] Execute(DAL<Depoimento> dal)
     {

@@ -7,7 +7,7 @@ using Menso.Tools.Exceptions;
 
 namespace JornadaMilhas.API.Depoimentos.DeletarDepoimento;
 
-public class DeletarDepoimentoEndpoint() : DeleteEndpoint<ValueRequest<Guid>>(default!, true)
+public class DeletarDepoimentoEndpoint() : DeleteEndpoint<ValueRequest<Guid>>(default!, true, "Depoimentos")
 {
     internal static void ExecuteAsync([AsParameters] ValueRequest<Guid> id, DAL<Depoimento> dal, IDepoimentoRepository depoimentoRepository)
     {

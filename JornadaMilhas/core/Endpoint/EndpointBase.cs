@@ -7,7 +7,8 @@ public abstract class EndpointBase(
     EndpointMethod method,
     JsonSerializerContext serializerContext,
     bool allowAnonymous = false,
-    EndpointCacheOutput cacheOutput = EndpointCacheOutput.None)
+    EndpointCacheOutput cacheOutput = EndpointCacheOutput.None,
+    string tag = "")
 {
     public EndpointMethod Method => method;
     public bool AllowAnonymous => allowAnonymous;
@@ -16,7 +17,7 @@ public abstract class EndpointBase(
     public string CacheOutputPolicy => cacheOutput.ToString();
 
     public string Paths => $"api/{GetType().FullName!.Replace(".", "/")}";
-
+    public string Tag => tag;
     public HttpMethod GetHttpMethod => method switch
     {
         EndpointMethod.Get => HttpMethod.Get,

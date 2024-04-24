@@ -6,7 +6,7 @@ using Menso.Tools.Exceptions;
 
 namespace JornadaMilhas.API.Depoimentos.EditarDepoimento;
 
-public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest>(default!, true)
+public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest>(default!, true, "Depoimentos")
 {
     internal static async Task<EditarDepoimentoResponse> ExecuteAsync(IHostEnvironment env, EditarDepoimentoRequest request, DAL<Depoimento> dal, IDepoimentoRepository depoimentoRepository)
     {

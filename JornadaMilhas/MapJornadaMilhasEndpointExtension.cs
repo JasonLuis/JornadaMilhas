@@ -2,6 +2,7 @@
 using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.API.core.EndPoint;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace JornadaMilhas.API;
 
@@ -45,6 +46,11 @@ public static class MapJornadaMilhasEndpointExtension
         else
         {
           routeBuilder.RequireAuthorization();
+        }
+
+        if(!endpoint.Tag.IsNullOrEmpty())
+        {
+            routeBuilder.WithTags(endpoint.Tag);
         }
 
         return endpoints;
@@ -113,6 +119,12 @@ public static class MapJornadaMilhasEndpointExtension
         {
             routeBuilder.RequireAuthorization();
         }
+
+        if (!endpoint.Tag.IsNullOrEmpty())
+        {
+            routeBuilder.WithTags(endpoint.Tag);
+        }
+
         return routeBuilder;
     }
 }
