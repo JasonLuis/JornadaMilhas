@@ -1,7 +1,7 @@
 using JornadaMilhas.API;
 using JornadaMilhas.API.core;
+using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.Shared.Dados.Data;
-using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 using JornadaMilhas.Shared.Models.Models.Destinos;
 
@@ -20,6 +20,8 @@ builder.Services.AddServiceApplicationContext();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
+builder.Services.AddProblemDetails();
+builder.Services.AddExceptionHandler<ExceptionToProblemDetailsHandler>();
 
 var app = builder.Build();
 
@@ -30,6 +32,10 @@ app.UseCors(options =>
     .AllowAnyHeader();
 
 });
+
+app.UseHttpsRedirection();
+app.UseExceptionHandler();
+app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

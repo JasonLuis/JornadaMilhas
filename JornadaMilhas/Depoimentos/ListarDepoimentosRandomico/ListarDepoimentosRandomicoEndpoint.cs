@@ -6,13 +6,13 @@ using System;
 
 namespace JornadaMilhas.API.Depoimentos.ListarDepoimentosRandomico;
 
-public class ListarDepoimentoRandomicoEndpoint() : QueryEndpoint<ListarDepoimentoRandomicoResponse[]>(default!, true, "Depoimentos")
+public class ListarDepoimentosRandomicoEndpoint() : QueryEndpoint<ListarDepoimentosRandomicoResponse[]>(default!, true, "Depoimentos")
 {
-    internal static ListarDepoimentoRandomicoResponse[] Execute(DAL<Depoimento> dal)
+    internal static ListarDepoimentosRandomicoResponse[] Execute(DAL<Depoimento> dal)
     {
         Random random = new Random();
         var depoimentos = dal.Listar()
-            .Select(x => new ListarDepoimentoRandomicoResponse(x.Id, x.Foto, x.Texto, x.Nome))
+            .Select(x => new ListarDepoimentosRandomicoResponse(x.Id, x.Foto, x.Texto, x.Nome))
             .OrderBy(x => random.Next()).Take(3).ToArray();
 
         return depoimentos;

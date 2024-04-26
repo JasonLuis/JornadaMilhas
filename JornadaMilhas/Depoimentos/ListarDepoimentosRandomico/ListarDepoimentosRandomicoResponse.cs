@@ -1,8 +1,8 @@
 ﻿namespace JornadaMilhas.API.Depoimentos.ListarDepoimentosRandomico;
 
-public class ListarDepoimentoRandomicoResponse
+public class ListarDepoimentosRandomicoResponse
 {
-    public ListarDepoimentoRandomicoResponse(Guid id, string? foto, string? texto, string nome)
+    public ListarDepoimentosRandomicoResponse(Guid id, string? foto, string? texto, string nome)
     {
         Id = id;
         Foto = foto;

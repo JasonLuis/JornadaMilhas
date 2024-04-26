@@ -5,6 +5,7 @@ using JornadaMilhas.API.Depoimentos.ListarDepoimentos;
 using JornadaMilhas.API.Depoimentos.ListarDepoimentosRandomico;
 using JornadaMilhas.API.Destinos.CriarDestinos;
 using JornadaMilhas.API.Destinos.EdiarDestino;
+using JornadaMilhas.API.Destinos.ListarDestinos;
 using System.Text.Json.Serialization;
 
 namespace JornadaMilhas.API;
@@ -20,7 +21,8 @@ namespace JornadaMilhas.API;
 [JsonSerializable(typeof(ValueRequest<Guid>))]
 
 [JsonSerializable(typeof(ListarDepoimentosResponse[]))]
-[JsonSerializable(typeof(ListarDepoimentoRandomicoResponse[]))]
+[JsonSerializable(typeof(ListarDepoimentosRandomicoResponse[]))]
+[JsonSerializable(typeof(ListarDestinosResponse[]))]
 
 // Destino
 [JsonSerializable(typeof(CriarDestinoRequest))]
@@ -29,5 +31,6 @@ namespace JornadaMilhas.API;
 [JsonSerializable(typeof(EditarDestinoRequest))]
 [JsonSerializable(typeof(EditarDestinoResponse))]
 
+[JsonSerializable(typeof(object))]
 
 public partial class DepoimentosContextSeralization : JsonSerializerContext { }

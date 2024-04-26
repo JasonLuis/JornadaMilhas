@@ -1,11 +1,6 @@
 ﻿using JornadaMilhas.API.core.Endpoint;
-using JornadaMilhas.API.Depoimentos.CriarDepoimento;
-using JornadaMilhas.API.Depoimentos.EditarDepoimento;
-using JornadaMilhas.API.Destinos.CriarDestinos;
 using JornadaMilhas.Shared.Dados.Data;
-using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Dados.Data.Repository.Destino;
-using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 using JornadaMilhas.Shared.Models.Models.Destinos;
 using Menso.Tools.Exceptions;
 
