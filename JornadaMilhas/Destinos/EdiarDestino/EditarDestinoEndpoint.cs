@@ -12,7 +12,7 @@ public class EditarDestinoEndpoint() : UpdateEndpoint<EditarDestinoRequest>(defa
     internal static async Task<EditarDestinoResponse> ExecuteAsync(IHostEnvironment env, EditarDestinoRequest request, DAL<Destino> dal, IDestinoRepository repository)
     {
         var destino = dal.RecuperarPor(d => d.Id == request.Id);
-        Throw.When.Null(destino, "depoimento não encontrado");
+        Throw.Http.BadRequest.When.Null(destino, "Destino não encontrada");
 
         string foto = "";
 

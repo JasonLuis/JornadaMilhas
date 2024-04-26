@@ -2,6 +2,7 @@
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
+using JornadaMilhas.Shared.Models.Models.Destinos;
 using Menso.Tools.Exceptions;
 
 namespace JornadaMilhas.API.Depoimentos.EditarDepoimento;
@@ -12,7 +13,7 @@ public class EditarDepoimentoEndpoint() : UpdateEndpoint<EditarDepoimentoRequest
     {
 
         var depoimento = dal.RecuperarPor(d => d.Id == request.Id);
-        Throw.When.Null(depoimento, "depoimento não encontrado");
+        Throw.Http.BadRequest.When.Null(depoimento, "Depoimento não encontrada");
 
         string foto = "";
 

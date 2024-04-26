@@ -13,7 +13,7 @@ public class DeletarDepoimentoEndpoint() : DeleteEndpoint<ValueRequest<Guid>>(de
     {
         var depoimento = dal.RecuperarPor(a => a.Id == id.Value);
 
-        Throw.Http.BadRequest.When.Null(depoimento, "depoimento não encontrado");
+        Throw.Http.BadRequest.When.Null(depoimento, "Depoimento não encontrado");
 
         depoimentoRepository.Remover(depoimento);
     }

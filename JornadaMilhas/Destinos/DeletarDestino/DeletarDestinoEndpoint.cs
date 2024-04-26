@@ -15,12 +15,8 @@ public class DeletarDestinoEndpoint() : DeleteEndpoint<ValueRequest<Guid>>(defau
     {
         var destino = dal.RecuperarPor(a => a.Id == id.Value);
 
-        //Throw.When.Null(destino, "Destino não encontrado");
-        if(destino is null)
-        {
-            Throw.Http.BadRequest.When.Null(destino, "Pessoa física não encontrada");
-        }
-        
+        Throw.Http.BadRequest.When.Null(destino, "Destino não encontrada");
+
         destinoRepository.Remover(destino);
     }
 }
