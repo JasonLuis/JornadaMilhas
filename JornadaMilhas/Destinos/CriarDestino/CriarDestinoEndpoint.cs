@@ -1,5 +1,6 @@
 ﻿using JornadaMilhas.API.core.Endpoint;
 using JornadaMilhas.API.Depoimentos.CriarDepoimento;
+using JornadaMilhas.API.Helpers;
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Dados.Data.Repository.Depoimento;
 using JornadaMilhas.Shared.Dados.Data.Repository.Destino;
@@ -13,27 +14,14 @@ public class CriarDestinoEndpoint(): CommandEndpoint<CriarDestinoRequest>(defaul
 
     internal static async Task<CriarDestinoResponse> ExecuteAsync(IHostEnvironment env, CriarDestinoRequest request, IDestinoRepository destinoRepository)
     {
-        string foto = "";
-
-        if (request.Foto is not null)
+        var destino = new Destino(request.Nome, request.Meta)
         {
-            var nome = request.Foto.Trim();
-            foto = DateTime.Now.ToString("ddMMyyyyhhss") + "." + nome + ".jpeg";
-
-            var path = Path.Combine(env.ContentRootPath, "wwwroot", "Fotos", foto);
-
-            using MemoryStream ms = new MemoryStream(Convert.FromBase64String(request.Foto!));
-            using FileStream fs = new(path, FileMode.Create);
-            await ms.CopyToAsync(fs);
-        }
-
-        var destino = new Destino(request.Nome, request.Preco)
-        {
-            Foto = foto,
+            Foto1 = await UploadFile.Upload(request.Foto1, env),
+            Foto2 = await UploadFile.Upload(request.Foto2, env),
         };
 
         var response = destinoRepository.Adicionar(destino);
 
-        return new CriarDestinoResponse(response.Id, response.Nome, response.Preco, response.Foto);
+        return new CriarDestinoResponse(response.Id, response.Nome, response.Foto1, response.Foto2, response.Meta, response.TextoDescritivo);
     }
 }

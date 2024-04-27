@@ -1,4 +1,5 @@
 ﻿using JornadaMilhas.API.core.Endpoint;
+using JornadaMilhas.API.Helpers;
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Dados.Data.Repository.Destino;
 using JornadaMilhas.Shared.Models.Models.Destinos;
@@ -14,26 +15,14 @@ public class EditarDestinoEndpoint() : UpdateEndpoint<EditarDestinoRequest>(defa
         var destino = dal.RecuperarPor(d => d.Id == request.Id);
         Throw.Http.BadRequest.When.Null(destino, "Destino não encontrada");
 
-        string foto = "";
-
-        if (request.Foto is not null)
-        {
-            var nome = request.Foto.Trim();
-            foto = DateTime.Now.ToString("ddMMyyyyhhss") + "." + nome + ".jpeg";
-
-            var path = Path.Combine(env.ContentRootPath, "wwwroot", "Fotos", foto);
-
-            using MemoryStream ms = new MemoryStream(Convert.FromBase64String(request.Foto!));
-            using FileStream fs = new(path, FileMode.Create);
-            await ms.CopyToAsync(fs);
-            destino!.Foto = foto;
-        }
-
         destino!.Nome = request.Nome;
-        destino.Preco = request.Preco;
+        destino.Foto1 = await UploadFile.Upload(request.Foto1, env);
+        destino.Foto2 = await UploadFile.Upload(request.Foto2, env);
+        destino.Meta = request.Meta;
+        destino.TextoDescritivo = request.TextoDescritivo;
 
         var response = repository.Atualizar(destino);
 
-        return new EditarDestinoResponse(response.Id, response.Nome, response.Preco, response.Foto);
+        return new EditarDestinoResponse(destino.Id, destino.Nome, destino.Meta, destino.TextoDescritivo, destino.Foto1, destino.Foto2);
     }
 }

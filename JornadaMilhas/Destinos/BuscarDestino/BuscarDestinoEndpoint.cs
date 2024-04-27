@@ -14,6 +14,6 @@ public class BuscarDestinoEndpoint(): QueryEndpoint<BuscarDestinoResponse,ValueR
         var destino = dal.RecuperarPor(x => x.Nome.ToUpper().Equals(nome.ToString().ToUpper()));
         Throw.Http.NotFound.When.Null(destino, "Nenhum destino foi encontrado");
 
-        return new BuscarDestinoResponse(destino.Id, destino.Nome, destino.Preco, destino.Foto);
+        return new BuscarDestinoResponse(destino.Id, destino.Nome, destino.Foto1, destino.Foto2, destino.Meta, destino.TextoDescritivo!);
     }
 }
