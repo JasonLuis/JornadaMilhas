@@ -6,7 +6,7 @@ namespace JornadaMilhas.API.Helpers;
 public class UploadFile
 {
 
-    public static async Task<string> Upload(string? fileBase64, IHostEnvironment env)
+    internal static async Task<string> Upload(string? fileBase64, IHostEnvironment env)
     {
         if (!fileBase64.IsNullOrEmpty())
         {
@@ -22,6 +22,6 @@ public class UploadFile
             return foto;
         }
 
-        return "";
+        return "img.png";
     }
 }

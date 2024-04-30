@@ -72,6 +72,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -199,6 +207,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Google_GenerativeAI": {
+              "target": "Package",
+              "version": "[0.1.20, )"
+            },
             "Menso.Tools.Exceptions": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -212,6 +224,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.11.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
