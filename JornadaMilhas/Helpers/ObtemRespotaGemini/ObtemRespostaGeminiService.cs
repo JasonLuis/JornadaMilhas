@@ -1,8 +1,5 @@
-﻿using Azure;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using OpenAI_API.Moderation;
-using System.Net.Http;
 
 namespace JornadaMilhas.API.Helpers.ObtemRespotaGemini;
 
@@ -22,8 +19,6 @@ internal class ObtemRespostaGeminiService(HttpClient httpClient) : IObtemRespost
             throw new Exception("Error, apiKey is Empty");
         }
 
-        var request = new ObtemRespostaGeminiRequest(text);
-
         try
         {
             var requestContent = new ObtemRespostaGeminiRequest(text);
@@ -38,8 +33,7 @@ internal class ObtemRespostaGeminiService(HttpClient httpClient) : IObtemRespost
         }
         catch (HttpRequestException ex)
         {
-            // Trate a exceção aqui
-            throw new Exception("Error calling Gemini API", ex);
+           throw new Exception("Error calling Gemini API", ex);
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using GenerativeAI.Models;
-using GenerativeAI.Types;
-using JornadaMilhas.API.Helpers.ObtemRespotaGemini;
-using Microsoft.IdentityModel.Tokens;
+﻿using JornadaMilhas.API.Helpers.ObtemRespotaGemini;
 // using OpenAI_API;
 
 namespace JornadaMilhas.API.Helpers;
