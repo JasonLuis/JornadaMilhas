@@ -1,5 +1,4 @@
 ﻿using JornadaMilhas.API.Helpers.ObtemRespotaGemini;
-// using OpenAI_API;
 
 namespace JornadaMilhas.API.Helpers;
 
@@ -45,3 +44,4 @@ public class GerarTextoDescritivo
         return response!.ToString()!;
     }
 }
+  
