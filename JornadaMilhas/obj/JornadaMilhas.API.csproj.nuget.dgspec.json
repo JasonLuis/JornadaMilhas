@@ -207,10 +207,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Google_GenerativeAI": {
-              "target": "Package",
-              "version": "[0.1.20, )"
-            },
             "Menso.Tools.Exceptions": {
               "target": "Package",
               "version": "[1.0.0, )"

@@ -1,5 +1,6 @@
 ﻿using GenerativeAI.Models;
 using GenerativeAI.Types;
+using JornadaMilhas.API.Helpers.ObtemRespotaGemini;
 using Microsoft.IdentityModel.Tokens;
 // using OpenAI_API;
 
@@ -7,8 +8,14 @@ namespace JornadaMilhas.API.Helpers;
 
 public class GerarTextoDescritivo
 {
+    private readonly IObtemRespostaGeminiService _obtemRespostaGeminiService;
 
-    internal static async Task<string> GerarTexto(string destino, int qtdCaracteres)
+    public GerarTextoDescritivo(IObtemRespostaGeminiService obtemRespostaGeminiService)
+    {
+        _obtemRespostaGeminiService = obtemRespostaGeminiService;
+    }
+
+    internal async Task<string> GerarTexto(string destino, int qtdCaracteres)
     {
         /*** Utilizando o ChatGPT ***/
         //var client = new OpenAIAPI("Key");
@@ -24,27 +31,20 @@ public class GerarTextoDescritivo
         /*** Utilizando o Google_Generate_AI ***/
         // Documentação da biblioteca Google_Generate_AI: https://github.com/gunpal5/Google_GenerativeAI
 
+        //var client = new GenerativeModel(apiKey!);
+        //var chat = client.StartChat(new StartChatParams());
+        //var response = await chat.SendMessageAsync(
+        //    $"Faça um resumo sobre {destino} enfatizando o porque este lugar é incrível." +
+        //    $" Utilize uma linguagem informal e até {qtdCaracteres.ToString()} caracteres no máximo em cada parágrafo." +
+        //    $" Crie 2 parágrafos neste resumo."
+        //);
 
-        IConfiguration configuration = new ConfigurationBuilder()
-            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-            .AddJsonFile("appsettings.json")
-            .Build();
-
-        var apiKey = configuration.GetConnectionString("API_KEY");
-
-        if (apiKey.IsNullOrEmpty())
-        {
-            throw new Exception("Error, apiKey is Empty");
-        }
-
-        var client = new GenerativeModel(apiKey!);
-        var chat = client.StartChat(new StartChatParams());
-        var response = await chat.SendMessageAsync(
-            $"Faça um resumo sobre {destino} enfatizando o porque este lugar é incrível." +
+        var message = $"Faça um resumo sobre {destino} enfatizando o porque este lugar é incrível." +
             $" Utilize uma linguagem informal e até {qtdCaracteres.ToString()} caracteres no máximo em cada parágrafo." +
-            $" Crie 2 parágrafos neste resumo."
-        );
+            $" Crie 2 parágrafos neste resumo.";
 
-        return response;
+       var response = await _obtemRespostaGeminiService.GetResponseGemini(message);
+
+        return response!.ToString()!;
     }
 }

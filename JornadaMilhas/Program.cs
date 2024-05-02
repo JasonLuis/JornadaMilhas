@@ -1,6 +1,7 @@
 using JornadaMilhas.API;
 using JornadaMilhas.API.core;
 using JornadaMilhas.API.core.Endpoint;
+using JornadaMilhas.API.Helpers.ObtemRespotaGemini;
 using JornadaMilhas.Shared.Dados.Data;
 using JornadaMilhas.Shared.Modelos.Models.Depoimentos;
 using JornadaMilhas.Shared.Models.Models.Destinos;
@@ -22,6 +23,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<ExceptionToProblemDetailsHandler>();
+
+builder.Services.AddHttpClient<IObtemRespostaGeminiService, ObtemRespostaGeminiService>
+    (client =>{
+            client.BaseAddress = new Uri(
+                "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
+            );
+     });
 
 var app = builder.Build();
 
