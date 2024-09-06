@@ -18,20 +18,25 @@ public class JornadaMilhasContext: DbContext
     {}
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        IConfiguration configuration = new ConfigurationBuilder()
+    {   
+
+        if (!optionsBuilder.IsConfigured)
+        {
+            IConfiguration configuration = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddJsonFile("appsettings.json")
             .Build();
 
-        var connectionString = configuration.GetConnectionString("key"); 
-        if (connectionString.IsNullOrEmpty())
-        {
-            throw new Exception("Error, string connection empty");
+            var connectionString = configuration.GetConnectionString("key");
+            if (connectionString.IsNullOrEmpty())
+            {
+                throw new Exception("Error, string connection empty");
+            }
+            optionsBuilder
+                .UseSqlServer(connectionString)
+                .UseLazyLoadingProxies();
         }
-        optionsBuilder
-            .UseSqlServer(connectionString)
-            .UseLazyLoadingProxies();
+        
     }
 
 

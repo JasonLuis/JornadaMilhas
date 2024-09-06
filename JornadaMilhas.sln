@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JornadaMilhas.Shared.Dados"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{430B7332-24BF-4FED-82B0-65200B006475}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes.Integracao", "Testes.Integracao\Testes.Integracao.csproj", "{ECD1767C-DEBB-412E-8CBA-DB2ACE4E6B91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{D991BF85-2F1F-4154-9681-A27E50F022AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D991BF85-2F1F-4154-9681-A27E50F022AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D991BF85-2F1F-4154-9681-A27E50F022AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD1767C-DEBB-412E-8CBA-DB2ACE4E6B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD1767C-DEBB-412E-8CBA-DB2ACE4E6B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD1767C-DEBB-412E-8CBA-DB2ACE4E6B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD1767C-DEBB-412E-8CBA-DB2ACE4E6B91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -152,4 +152,3 @@ C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\Menso.T
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\obj\Debug\net8.0\JornadaMilhas.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\OpenAI_API.dll
-C:\Users\jason\source\repos\JornadaMilhas\JornadaMilhas\bin\Debug\net8.0\GenerativeAI.dll
